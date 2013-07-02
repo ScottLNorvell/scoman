@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+	{% block heading %}
+	<a href="/blog" class="main-title">
+    Scott's Front Page:
+  </a>
+	
+	{% endblock %}
+  {% block content %}
+  <div class="front">
+  	<div class="front-buttons">
+	<br />
+	{% for url,title in handlers %}
+		<a href='{{url}}'>
+	<div class="button">
+		{{title}}	
+	</div>
+	</a>
+	<br />
+	
+	{% endfor %}
+	<br />
+	</div>
+	</div>
+	{% endblock %}
+</html>

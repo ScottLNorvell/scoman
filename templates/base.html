@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link  rel="stylesheet" type="text/css" 
+    href="/stylesheets/main.css" />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+
+  <body>
+  	{% block heading %}
+  <a href="/blog/newpost">Post Again?</a>
+  	<a href="/blog" class="main-title">
+    Blogged about something:
+  </a>
+    
+	{% endblock %}
+	<div class="login-area">
+	{% block logarea %}
+	
+    
+      <a class="login-link" href="/blog/login">login</a>
+      |
+      <a class="login-link" href="/blog/signup">signup</a>
+      |
+      <a class="login-link" href="/">index</a>
+    
+  
+  	{% endblock %}
+  	</div>
+  <div id="content">
+  {% block content %}
+  {% endblock %}
+  </div>
+  <br /><br />
+  <div class="age">
+    queried {{seconds}} seconds ago
+  </div>
+</body>
+
+</html>
+
